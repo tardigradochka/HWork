@@ -53,7 +53,10 @@ print('\n#10:', 'nAna has %d apples and %d peaches' % (apl, pea))
 # # 11*. With variable substitutions by name (hint: by using dict)
 diction = {'apple': 17, 'peach': 18}
 print('\n#11:', f"Anna has {diction['apple']} apples and {diction['peach']} peaches")
-#
+# var1="three"
+# var2="one thousand"
+# data_dict={"one": var1, "two": var2}
+# print('Anna has %(one)s apples and %(two)s peaches.' % data_dict)
 # Comprehensions:
 # (1)
 # lst = []
@@ -69,7 +72,7 @@ print('\n#11:', f"Anna has {diction['apple']} apples and {diction['peach']} peac
 # print(list_comprehension)
 #
 # 12. Convert (1) to list comprehension
-list_compr12 = [num ** 2 if num % 2 == 1 else num **4 for num in range(10)]
+list_compr12 = [num ** 2 if num % 2 == 1 else num ** 4 for num in range(10)]
 print('\n#12:', list_compr12)
 # 13. Convert (2) to regular for with if-else
 list_compr13 = []
