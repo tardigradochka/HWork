@@ -10,8 +10,8 @@ for i in list_var:
     print(id(i))
 #
 #2. Appending 4 and 5 to the lst_d and define the id one more time:
-# lst_d.append(4)
-# lst_d.append(5)
+lst_d.append(4)
+lst_d.append(5)
 print('\n#2:', lst_d, '- id:', id(lst_d))
 #
 # 3. Defining the type of each object from step 1:
@@ -190,8 +190,8 @@ print('\n#24:', filtr)
 filtr2 = list(filter(lambda n: n < 0, range(-10, 10)))
 print('\n#25:', filtr2)
 # 26*. Using the filter function, find the values that are common to the two lists:
-list_126 = [1,2,3,5,7,9,1]
-list_226 = [2,3,5,6,7,8,]
+list_126 = [1,2,3,5,7]
+list_226 = [2,3,5,6,7]
 filtr3 = list(filter(lambda k: k in list_126, list_226))
 print('\n#26:', filtr3)
 

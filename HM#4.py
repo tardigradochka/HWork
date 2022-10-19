@@ -100,7 +100,7 @@ WhiteWolf = Wolf()
 
 for predator in (WhiteBear, WhiteWolf):
     predator.eat()
-    predator.eat()
+
 
 
 # Магічні методи:
@@ -118,8 +118,34 @@ class City:
         else:
             return 'Your city is too small'
 
-print('\n#8 Magic methods')
+print('\n#8.1 Magic methods')
 gorodok = City('Vishneve', population=8000)
 print(gorodok.__gt__())
 village = City('Jablukivka', population=1200)
 print(village.__gt__())
+
+#Attempt №2
+class CityNew:
+    def __new__(cls, name: str, pop: int):
+        if pop < 1500:
+            return RuntimeError, "City is too small"
+        else:
+            instance = super().__new__(cls)
+            return instance
+
+    def __init__(self, name, pop):
+        self.name = name
+        self.pop = pop
+        print ("City -", name, pop)
+
+
+print('\n#8.2 Magic methods:')
+Gorod = CityNew('Izjum', 5000)
+print(Gorod)
+Negorod = CityNew('Grusheve', 1200)
+print("\nCe City?", Negorod)
+
+
+
+
+
