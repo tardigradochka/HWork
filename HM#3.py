@@ -182,7 +182,10 @@ print('\n#22:', lst_2)
 list_A = [2, 3, 4]
 list_B = [5, 6, 7]
 lst_3 = list(map(lambda y: y+3, list_A))
+lst_4 = list(map(lambda z, p: z**p, list_A, list_B))
 print('\n#23:', lst_3)
+print('\n#23:', lst_4)
+
 # 24. Use filter and lambda to filter the number of a lst_to_sort with elem % 2 == 1.
 filtr = list(filter(lambda n: n % 2 == 1, lst_to_sort))
 print('\n#24:', filtr)
